@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -27,7 +27,7 @@ import BlogDetail from './pages/BlogDetails';
 
 function App() {
   return (
-     <Router basename={import.meta.env.PROD ? "/magsmenreact" : "/"}>
+     <BrowserRouter basename={import.meta.env.DEV ? "/magsmenreact" : "/"}>
       <div className="min-h-screen bg-white">
         <Header />
         <main>
@@ -57,7 +57,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
