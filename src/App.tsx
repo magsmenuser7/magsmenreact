@@ -27,7 +27,7 @@ import BlogDetail from './pages/BlogDetails';
 
 function App() {
   return (
-     <BrowserRouter basename={import.meta.env.PROD ? "/magsmenreact" : "/"}>
+    <Router basename="/magsmenreact">
       <div className="min-h-screen bg-white">
         <Header />
         <main>
@@ -57,7 +57,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
