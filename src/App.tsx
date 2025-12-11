@@ -27,7 +27,7 @@ import BlogDetail from './pages/BlogDetails';
 
 function App() {
   return (
-     <BrowserRouter basename={import.meta.env.DEV ? "/magsmenreact" : "/"}>
+     <BrowserRouter basename={import.meta.env.PROD ? "/magsmenreact" : "/"}>
       <div className="min-h-screen bg-white">
         <Header />
         <main>
